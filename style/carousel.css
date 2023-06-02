@@ -1,0 +1,55 @@
+.carousel-cell{
+    height: 70vh;
+    height: calc(var(--vh, 1vh) * 70);
+    padding: 2em 3em;
+}
+
+.carousel-cell img{
+    max-height: 100%;
+    
+    transition: height 0.5s, box-shadow 0.5s;
+    /*box-shadow: 0px 0px 10px grey ;*/
+}
+
+.is-selected img{
+    height: 100%;
+    /*box-shadow: 0px 0px 30px grey ;*/
+  
+}
+
+#detail-overlay{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: white;
+    overflow-y: auto;
+}
+
+.overlay-content{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.close-overlay{
+    position: absolute;
+    padding:2em;
+    top: -1em;
+    right:  0;
+}
+
+.close-overlay:after{
+    display: inline-block;
+    content: "\00d7"; /* This will render the 'X' */
+    font-size: 2em;
+  }
+
+  h2{
+    text-align: center;
+    font-weight: normal;
+  }

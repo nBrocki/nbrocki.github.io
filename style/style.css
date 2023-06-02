@@ -1,0 +1,63 @@
+html, body{
+    height: 100%;;
+    margin: 0px;
+    width: 100%;
+}
+
+body *{
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color:;
+}
+
+main{
+    position: relative;
+    flex-grow: 2;
+}
+
+header, .footer{
+    padding: 2vh 3vw;
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+}
+
+header{
+    border-bottom: 1px solid  rgb(49, 47, 47);
+}
+
+.hidden-link{
+    color: inherit;
+    text-decoration: none;
+}
+
+#logo{
+    font-size: 1.5em;
+    vertical-align: middle;
+}
+
+#contact{
+   display: flex;
+   vertical-align: middle;
+}
+
+#contact .link{ 
+    padding-left: 5vw;
+}
+
+#contact img.link {
+    height: 3vh;
+}
+
+#contact span.link {
+    line-height: 0.9;
+    display: block;
+    font-size: 3.6vh;
+}
+
