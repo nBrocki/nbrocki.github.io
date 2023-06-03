@@ -13,7 +13,6 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    color:;
 }
 
 main{
@@ -60,4 +59,7 @@ header{
     display: block;
     font-size: 3.6vh;
 }
+
+
+
 

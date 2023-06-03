@@ -57,3 +57,11 @@
   .flickity-prev-next-button{
     top: 100% !important;
   }
+
+  @media only screen and (max-width: 600px) {
+    .carousel-cell{
+        height: 60vh;
+        height: calc(var(--vh, 1vh) * 70);
+        padding: 1em 0.5em;
+    }
+  }
