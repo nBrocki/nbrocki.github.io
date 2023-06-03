@@ -53,6 +53,7 @@
     text-align: center;
     font-weight: normal;
   }
-  
-git config --global user.name nBrocki
-git config --global user.email brocki@posteo.de
+
+  .flickity-prev-next-button{
+    top: 100% !important;
+  }
