@@ -1,6 +1,6 @@
 .carousel-cell{
     height: 60vh;
-    height: calc(var(--vh, 1vh) * 70);
+    height: calc(var(--vh, 1vh) * 60);
     padding: 2em 1em;
 }
 
@@ -12,7 +12,7 @@
 }
 
 .is-selected img{
-    height: 100%;
+   
     /*box-shadow: 0px 0px 30px grey ;*/
   
 }
@@ -55,13 +55,13 @@
   }
 
   .flickity-prev-next-button{
-    top: 100% !important;
+    top: 95% !important;
   }
 
   @media only screen and (max-width: 600px) {
     .carousel-cell{
         height: 60vh;
-        height: calc(var(--vh, 1vh) * 70);
+        height: calc(var(--vh, 1vh) * 60);
         padding: 1em 0.5em;
     }
   }
