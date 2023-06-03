@@ -1,12 +1,13 @@
 main{
     padding:5vh 5vw;
+    display:flex;
+    flex-direction: column;
 }
 .news-box{
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+    flex-grow:2;
     border: 1px solid grey;
     overflow: hidden;
 }
@@ -19,7 +20,7 @@ main{
     display: inline-block;
     white-space: nowrap;
     animation: floatText 15s infinite linear;
-    /*Initial offset*/
+    padding-left: 100%
 }
 
 .sitemessage:hover{
@@ -31,7 +32,7 @@ main{
         transform: translateX(0%)    
     }
     to {
-      transform: translateX(-150%);
+      transform: translateX(-100%);
     }
   }
 
@@ -50,6 +51,12 @@ main{
 .adress span{
     display: block;
     text-align: right;
+}
+
+.title{
+    font-size: 3em;
+    margin: 1em;
+    text-align: center;
 }
 
 @media only screen and (max-width: 600px) {
