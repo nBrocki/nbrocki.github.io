@@ -1,7 +1,7 @@
 .carousel-cell{
-    height: 70vh;
+    height: 60vh;
     height: calc(var(--vh, 1vh) * 70);
-    padding: 2em 3em;
+    padding: 2em 1em;
 }
 
 .carousel-cell img{
