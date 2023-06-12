@@ -16,12 +16,6 @@
 .carousel-cell img {
   max-height: 100%;
   max-width: 100%;
-  /*box-shadow: 0px 0px 10px grey ;*/
-}
-
-.is-selected img {
-
-  /*box-shadow: 0px 0px 30px grey ;*/
 
 }
 
@@ -54,7 +48,7 @@
 .close-overlay:after {
   display: inline-block;
   content: "\00d7";
-  /* This will render the 'X' */
+
   font-size: 2em;
 }
 
@@ -86,6 +80,7 @@ h2 br {
 .detail-carousel .carousel-cell {
   padding: 40px 50px;
 }
+
 
 @media only screen and (max-width: 600px) {
   .carousel-cell {
@@ -122,3 +117,4 @@ h2 br {
   }
 
 }
+

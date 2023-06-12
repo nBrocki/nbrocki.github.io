@@ -21,11 +21,10 @@ const detailCarouselConfig =  {
     setGallerySize: false
 };
 
-const carouselCell = '<div class="carousel-cell"><img src="media/Images/cover/DerSchuppen_Cover.jpg" alt="" srcset=""></div>';
-
-
 var flkty = new Flickity('.main-carousel', carouselConfig);
 var detailFlkty = new Flickity('.detail-carousel', detailCarouselConfig);
+
+setTimeout(function(){flkty.resize()}, 200);
 
 // Overlay
 
@@ -40,12 +39,12 @@ function closeOverlay(){
 }
 
 // Open overlay
-flkty.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {
-    
+flkty.on('staticClick', function( event, pointer, cellElement, cellIndex ) {
+    console.log(cellElement)
     // every item can be opened
     //if(!cellElement.classList.contains("is-selected")) return;
     
-    let urlList = cellElement.children[0].getAttribute("data-content-url");
+    let urlList = cellElement.querySelector("img").getAttribute("data-content-url");
     const isMobile = window.innerWidth <= 600;
     getDetailImgs(urlList, isMobile).forEach(imgElement => {
         detailFlkty.append(imgElement);
