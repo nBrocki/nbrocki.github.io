@@ -16,7 +16,7 @@
 .carousel-cell img {
   max-height: 100%;
   max-width: 100%;
-
+  height: 100%;
 }
 
 #detail-overlay {
@@ -115,6 +115,11 @@ h2 br {
   h2 br{
     display: block;
   }
+
+  .main-carousel .carousel-cell {
+    width: var(--img-width);
+  }
+  
 
 }
 

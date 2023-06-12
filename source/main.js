@@ -28,23 +28,24 @@ window.addEventListener("load", function (event) {
 
     console.log("loaded");
     flkty = new Flickity('.main-carousel', carouselConfig);
-    // detailFlkty = new Flickity('.detail-carousel', detailCarouselConfig);
-    setTimeout(function () {
-       flkty.resize();
-        // Open overlay
-        flkty.on('staticClick', function (event, pointer, cellElement, cellIndex) {
+    detailFlkty = new Flickity('.detail-carousel', detailCarouselConfig);
+    setWidthProperty()
+    flkty.resize();
+    flkty.reposition();
+    // Open overlay
+    flkty.on('staticClick', function (event, pointer, cellElement, cellIndex) {
 
-            let urlList = cellElement.querySelector("img").getAttribute("data-content-url");
-            const isMobile = window.innerWidth <= 600;
-            getDetailImgs(urlList, isMobile).forEach(imgElement => {
-                detailFlkty.append(imgElement);
-            });
-
-            detailFlkty.select(isMobile ? 1 : 0, false, true);
-            contentOverlay.style.display = "block";
-            setTimeout(() => { detailFlkty.resize() }, 100);
+        let urlList = cellElement.querySelector("img").getAttribute("data-content-url");
+        const isMobile = window.innerWidth <= 600;
+        getDetailImgs(urlList, isMobile).forEach(imgElement => {
+            detailFlkty.append(imgElement);
         });
-    }, 1500);
+
+        detailFlkty.select(isMobile ? 1 : 0, false, true);
+        contentOverlay.style.display = "block";
+        setTimeout(() => { detailFlkty.resize() }, 100);
+    });
+
 
 })
 
@@ -56,8 +57,6 @@ const detailCarousel = contentOverlay.querySelector(".detail-carousel");
 
 function closeOverlay() {
     contentOverlay.style.display = "none";
-
-    console.log(detailCarousel.childNodes);
     detailFlkty.remove(detailCarousel.querySelectorAll(".carousel-cell"));
 }
 
@@ -93,3 +92,14 @@ function getDetailImgElement(url, imgClassName, hasContainer) {
 
     return newDiv;
 }
+
+addEventListener("resize", setWidthProperty);
+
+function setWidthProperty(event) {
+    console.log(event)
+    const img = document.querySelector(".main-carousel img");
+    const ratio = img.naturalWidth / img.naturalHeight;
+    console.log(img.height);
+    document.documentElement.style.setProperty('--img-width', `${img.height * ratio}px`);
+};
+
