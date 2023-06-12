@@ -21,7 +21,7 @@ main{
     flex-direction: column;
     background-color: #fff782;
     position: relative;
-    flex-grow:2;
+    flex-grow: 2;
 }
 .news-box{
     display: flex;
