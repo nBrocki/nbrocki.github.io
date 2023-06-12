@@ -1,4 +1,4 @@
-// Carousel reference: https://flickity.metafizzy.co/
+// Carousel reference: https:// .metafizzy.co/
 const carouselConfig =  {
     draggable: true,
     freeScroll: false,
@@ -46,18 +46,18 @@ flkty.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {
     //if(!cellElement.classList.contains("is-selected")) return;
     
     let urlList = cellElement.children[0].getAttribute("data-content-url");
-    getDetailImgs(urlList).forEach(imgElement => {
+    const isMobile = window.innerWidth <= 600;
+    getDetailImgs(urlList, isMobile).forEach(imgElement => {
         detailFlkty.append(imgElement);
     });
 
-    detailFlkty.select(0, false, true);
+    detailFlkty.select(isMobile ? 1 : 0, false, true);
     contentOverlay.style.display = "block";
     setTimeout(() => {detailFlkty.resize()}, 100);
 });
 
-function getDetailImgs(urlString){
+function getDetailImgs(urlString, isMobile){
     dataImg = [];
-    const isMobile = window.innerWidth <= 600;
     urlString.split(",").forEach(photoUrl => {
         
         dataImg.push(getDetailImgElement(photoUrl));
