@@ -2,37 +2,47 @@ main{
     padding:5vh 5vw;
     display:flex;
     flex-direction: column;
+    background-color: #fff782;
 }
 .news-box{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-grow:2;
     border: 1px solid grey;
     overflow: hidden;
+    background-color:white;
 }
 
 .news-box a, .news-box div{
     font-size: 5vh;
 }
 
-.sitemessage{
-    display: inline-block;
-    white-space: nowrap;
-    animation: floatText 15s infinite linear;
-    padding-left: 100%
+/* https://ryanmulligan.dev/blog/css-marquee/ */
+.marquee{
+    --gap: 1rem;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
 }
+  
+.marquee__content{
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: var(--gap);
+    animation: scroll 5s linear infinite;
+    font-family:Arial, Helvetica, sans-serif
+  }
 
-.sitemessage:hover{
-    animation-play-state: paused;
-}
-
-@keyframes floatText {
-    from{
-        transform: translateX(0%)    
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
     }
     to {
-      transform: translateX(-100%);
+      transform: translateX(calc(-100% - var(--gap)));
     }
   }
 
@@ -61,8 +71,9 @@ main{
 
 @media only screen and (max-width: 600px) {
     .news-box *{
-        font-size: 3vh;
+        font-size: 1rem;
         margin: 5vw;
+
     }
     
   }

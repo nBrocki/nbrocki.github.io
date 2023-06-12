@@ -1,13 +1,21 @@
+.main-carousel{
+    height: 100%;
+}
+
 .carousel-cell{
-    height: 60vh;
-    height: calc(var(--vh, 1vh) * 60);
-    padding: 2em 1em;
+    height: 100%;
+    padding: 1em 1em;
+    display:flex;
+    align-items: center;
+}
+
+.carousel-cell .container{
+  overflow-x: hidden;
 }
 
 .carousel-cell img{
     max-height: 100%;
-    
-    transition: height 0.5s, box-shadow 0.5s;
+    max-width: 100%;
     /*box-shadow: 0px 0px 10px grey ;*/
 }
 
@@ -52,16 +60,45 @@
   h2{
     text-align: center;
     font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
-  .flickity-prev-next-button{
-    top: 95% !important;
+  .flickity-button{
+    background-color: white !important;
+    border-radius: 0% !important;
+    margin:0.5em;
+  }
+
+  .news-box{
+    position: relative;
+  }
+
+  .detail-carousel{
+    width: 100%;
   }
 
   @media only screen and (max-width: 600px) {
     .carousel-cell{
-        height: 60vh;
-        height: calc(var(--vh, 1vh) * 60);
+        height: 80%;
         padding: 1em 0.5em;
     }
+
+    .flickity-prev-next-button{
+        top: 90% !important;
+      }
+
+    .detail-carousel .carousel-cell img{
+        width: 200%;
+        max-width: 200%;
+        height: auto;
   }
+
+  .detail-carousel .push-left {
+    position: relative;
+    left: -100%;
+  }
+
+  .detail-carousel .carousel-cell {
+    height: 90%;
+    overflow: hidden;
+}

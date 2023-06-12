@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,56 +12,77 @@
     <link rel="stylesheet" href="style/flickity.css">
 
 </head>
+
 <body>
-    
+
     <header id="header">
-        <a href="index.html"><span id="logo">AnAnother</span></a>
+        <a href="index.html" class="hidden-link" id="logo">AnAnother</a>
         <div id="contact">
-            <span class="link">@</span>
-            <img class="link" src="media/Icons/instagram.png" alt="Instagram" srcset="">
-            <!--<img src="media/Icons/instagram.png" alt="Instagram" srcset="">-->
+
+            <a href="mailto:test@test.de">MAIL</a>
+            <a href="http://instagram.com">INSTAGRAM</a>
+
         </div>
     </header>
 
     <main>
 
-        <h2>auf der Suche </br> nach der Zukunft<h2>
 
+        <div class="news-box">
+            <h2>auf der Suche nach der Zukunft</h2>
 
-        <div id="detail-overlay">
-            <div class="overlay-content">
-                <img src="" alt="" srcset="">
-                <div class="close-overlay"onclick="closeOverlay()"></div>
-            </div>
+                    <div id="detail-overlay">
+                        <div class="overlay-content">
+                            <div class="detail-carousel">
+                           
+                            </div>
+                            <div class="close-overlay" onclick="closeOverlay()"></div>
+                        </div>
+                    </div>
+
+                    <div class="main-carousel">
+
+                        <div class="carousel-cell">
+                            <img src="media/Images/cover/DerSchuppen_Cover.jpg"
+                                alt="" srcset="" data-content-url="media/Images/DerSchuppen/DerSchuppen.jpg,media/Images/DerSchuppen/DerSchuppen2.jpg,media/Images/DerSchuppen/DerSchuppen3.jpg,media/Images/DerSchuppen/DerSchuppen4.jpg,media/Images/DerSchuppen/DerSchuppen5.jpg">
+                        </div>
+
+                        <div class="carousel-cell">
+                            <img src="media/Images/cover/Flur_Cover.jpg"
+                                alt="" srcset="" data-content-url="media/Images/DerFlur/Flur.jpg,media/Images/DerFlur/Flur2.jpg,media/Images/DerFlur/Flur3.jpg,media/Images/DerFlur/Flur4.jpg,media/Images/DerFlur/Flur5.jpg">
+                        </div>
+
+                        <div class="carousel-cell">
+                            <img class="cover"
+                                src="media/Images/cover/Innenohr_Cover.jpg"
+                                alt="" srcset="" data-content-url="media/Images/DasInnenohr/Innenohr.jpg,media/Images/DasInnenohr/Innenohr2.jpg,media/Images/DasInnenohr/Innenohr3.jpg,media/Images/DasInnenohr/Innenohr4.jpg,media/Images/DasInnenohr/Innenohr5.jpg">
+                        </div>
+
+                        <div class="carousel-cell">
+                            <img src="media/Images/cover/Küchentisch_Cover.jpg"
+                                alt="" srcset="" data-content-url="media/Images/DerKuechentisch/Kuechentisch.jpg,media/Images/DerKuechentisch/Kuechentisch2.jpg,media/Images/DerKuechentisch/Kuechentisch3.jpg,media/Images/DerKuechentisch/Kuechentisch4.jpg,media/Images/DerKuechentisch/Kuechentisch5.jpg">
+                        </div>
+
+                        <div class="carousel-cell">
+                            <img src="media/Images/cover/Nachbarschaft_Cover.jpg"
+                                alt="" srcset="" data-content-url="media/Images/DieNachbarschaft/Nachbarschaft.jpg,media/Images/DieNachbarschaft/Nachbarschaft2.jpg,media/Images/DieNachbarschaft/Nachbarschaft3.jpg,media/Images/DieNachbarschaft/Nachbarschaft4.jpg,media/Images/DieNachbarschaft/Nachbarschaft5.jpg">
+                        </div>
+
+                        <div class="carousel-cell">
+                            <img class="cover"
+                                src="media/Images/cover/Wohnung_Cover.jpg"
+                                alt="" srcset="" data-content-url="media/Images/DieWohnung/Wohnung.jpg,media/Images/DieWohnung/Wohnung2.jpg,media/Images/DieWohnung/Wohnung3.jpg,media/Images/DieWohnung/Wohnung.jpg,media/Images/DieWohnung/Wohnung4.jpg,media/Images/DieWohnung/Wohnung5.jpg">
+                        </div>
+                    </div>
+
         </div>
-
-        <div class="main-carousel">
-            <div class="carousel-cell">
-                <img src="https://marketplace.canva.com/EAD7WmQzMUQ/2/0/1003w/canva-moon-photo-thriller-mystery-book-cover-QE7uv7YSwDQ.jpg" 
-                alt="" srcset=""
-                data-content-url="media/Images/table_contents_one.png">
-            </div>
-            
-            <div class="carousel-cell">
-                <img src="https://marketplace.canva.com/EAFTHnejGCg/1/0/1003w/canva-blue-white-minimalist-business-book-cover-vPzraEhZ1Fw.jpg" 
-                alt="" srcset=""
-                data-content-url="media/Images/table_contents_one.png">
-            </div>
-
-            <div class="carousel-cell">
-                <img class="cover" 
-                src="https://marketplace.canva.com/EAFA7N_NLQs/1/0/1003w/canva-cute-colorful-watercolor-simple-illustrated-young-adult-romance-book-cover-ooKN90UU-H0.jpg" alt="" srcset=""
-                data-content-url="media/Images/table_contents_one.png">
-            </div>
-        </div>
-
-
 
     </main>
 
     <div class="footer">Das ist ein Footer</div>
-<script src="source/flickity.pkgd.min.js"></script>
-<script src="source/viewport_calculator.js"></script>
-<script src="source/main.js"></script>
+    <script src="source/flickity.pkgd.min.js"></script>
+    <script src="source/viewport_calculator.js"></script>
+    <script src="source/main.js"></script>
 </body>
+
 </html>
