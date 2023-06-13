@@ -43,7 +43,7 @@ window.addEventListener("load", function (event) {
 
         detailFlkty.select(0, false, true);
         contentOverlay.style.display = "block";
-        setTimeout(() => { detailFlkty.resize() }, 100);
+        setTimeout(() => { detailFlkty.resize(); detailFlkty.reposition(); }, 500);
     });
 
 
