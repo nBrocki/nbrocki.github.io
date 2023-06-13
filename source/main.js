@@ -42,7 +42,10 @@ window.addEventListener("load", function (event) {
         });
 
         detailFlkty.select(0, false, true);
+        // Hide carousel until the first image has been loaded
+        detailCarousel.style.visibility = "hidden";
         contentOverlay.style.display = "block";
+        detailFlkty.resize(); detailFlkty.reposition();
         setTimeout(() => { detailFlkty.resize(); detailFlkty.reposition(); }, 100);
     });
 
@@ -108,5 +111,6 @@ function setWidthProperty(event) {
 const onImageLoad = function(){
     detailFlkty.resize(); detailFlkty.reposition();
     console.log("loaded");
+    detailCarousel.style.visibility = "visible";
 }
 
