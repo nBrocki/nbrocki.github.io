@@ -41,7 +41,7 @@ window.addEventListener("load", function (event) {
             detailFlkty.append(imgElement);
         });
 
-        detailFlkty.select(isMobile ? 1 : 0, false, true);
+        detailFlkty.select(0, false, true);
         contentOverlay.style.display = "block";
         setTimeout(() => { detailFlkty.resize() }, 100);
     });
@@ -62,12 +62,14 @@ function closeOverlay() {
 
 function getDetailImgs(urlString, isMobile) {
     dataImg = [];
-    urlString.split(",").forEach(photoUrl => {
-
-        dataImg.push(getDetailImgElement(photoUrl));
+    urlString.split(",").forEach((photoUrl, index) => {
+        
+        // workaround - should be replaced later :)
+        const isDoubleImage = index != 0 && index != 4;
+        dataImg.push(getDetailImgElement(photoUrl, isDoubleImage ? "double-img" : "", isMobile));
         // If its mobile, create a second copy of the elements
-        if (isMobile)
-            dataImg.push(getDetailImgElement(photoUrl, "push-left", true));
+          if (isMobile && isDoubleImage)
+            dataImg.push(getDetailImgElement(photoUrl, isDoubleImage ? "push-left double-img" : "push-left", true));
     });
     return dataImg;
 }
@@ -96,7 +98,6 @@ function getDetailImgElement(url, imgClassName, hasContainer) {
 addEventListener("resize", setWidthProperty);
 
 function setWidthProperty(event) {
-    console.log(event)
     const img = document.querySelector(".main-carousel img");
     const ratio = img.naturalWidth / img.naturalHeight;
     console.log(img.height);

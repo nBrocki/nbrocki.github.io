@@ -67,8 +67,12 @@ header, .footer{
     content: "\2192";
 }
 
+@media only screen and (max-width: 600px) {
+    main{
+        padding: 5vw;
+    }
 
-
-
-
-
+    header, footer{
+        padding: 1vh 5vw
+    }
+}

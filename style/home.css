@@ -82,5 +82,9 @@
         padding: 0 3vw;
 
     }
+
+    .marquee__content{
+        animation: scroll 10s linear infinite;
+      }
     
   }

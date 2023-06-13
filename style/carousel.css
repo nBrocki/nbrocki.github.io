@@ -12,12 +12,14 @@
 
 .carousel-cell .container {
   overflow-x: hidden;
+  max-height: 100%;
 }
 
 .carousel-cell img {
   max-height: 100%;
   max-width: 100%;
   height: 100%;
+  width: 100%;
 }
 
 #detail-overlay {
@@ -65,7 +67,7 @@ h2 br {
 }
 
 .flickity-button {
-  background-color: white !important;
+  background-color: transparent !important;
   border-radius: 0% !important;
   margin: 0.5em;
 }
@@ -90,14 +92,14 @@ h2 br {
   }
 
   .flickity-prev-next-button {
-    top: 90% !important;
+    top: 93% !important;
   }
 
   .detail-carousel .carousel-cell {
     padding: 1em 1em;
   }
 
-  .detail-carousel .carousel-cell img {
+  .detail-carousel .carousel-cell .double-img {
     width: 200%;
     max-width: 200%;
     height: auto;
@@ -109,7 +111,7 @@ h2 br {
   }
 
   .detail-carousel .carousel-cell {
-    height: 90%;
+    height: 100%;
     overflow: hidden;
   }
 
