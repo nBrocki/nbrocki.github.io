@@ -1,9 +1,10 @@
-main{
+
+/*main{
     padding:5vh 5vw;
     display:flex;
     flex-direction: column;
     background-color: #fff782;
-}
+}*/
 .news-box{
     display: flex;
     flex-direction: column;
@@ -20,11 +21,12 @@ main{
 
 /* https://ryanmulligan.dev/blog/css-marquee/ */
 .marquee{
-    --gap: 1rem;
+    --gap: 0rem;
     display: flex;
     overflow: hidden;
     user-select: none;
     gap: var(--gap);
+    padding 2em 0;
 }
   
 .marquee__content{
@@ -47,16 +49,25 @@ main{
     }
   }
 
+.bottom-information{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+}
+
 .date{
     align-self: start;
 }
 
 .adress{
     align-self: end;
+    flex-grow:2;
 }
 
 .date, .adress{
-    margin: 1vw 3vw;
+    margin: 3vh 3vw;
 }
 
 .adress span{
@@ -66,9 +77,9 @@ main{
 
 
 @media only screen and (max-width: 600px) {
-    .news-box *{
-        font-size: 1rem;
-        padding: 0 5vw;
+    .news-box div{
+        font-size: 1.5rem;
+        padding: 0 3vw;
 
     }
     
