@@ -43,7 +43,7 @@ window.addEventListener("load", function (event) {
 
         detailFlkty.select(0, false, true);
         contentOverlay.style.display = "block";
-        setTimeout(() => { detailFlkty.resize(); detailFlkty.reposition(); }, 500);
+        setTimeout(() => { detailFlkty.resize(); detailFlkty.reposition(); }, 100);
     });
 
 
@@ -82,6 +82,7 @@ function getDetailImgElement(url, imgClassName, hasContainer) {
     if (imgClassName)
         img.className = imgClassName;
     img.setAttribute("src", url);
+    img.onload = onImageLoad;
 
     if (hasContainer) {
         const containerDiv = document.createElement("div");
@@ -103,4 +104,9 @@ function setWidthProperty(event) {
     console.log(img.height);
     document.documentElement.style.setProperty('--img-width', `${img.height * ratio}px`);
 };
+
+const onImageLoad = function(){
+    detailFlkty.resize(); detailFlkty.reposition();
+    console.log("loaded");
+}
 
